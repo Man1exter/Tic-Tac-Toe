@@ -23,10 +23,10 @@ body{
 
 .panel{
     height: 250px;
-    width: 318px;
+    width: 316px;
     background-color: gray;
     cursor: pointer;
-    border: 1px solid blue;
+    border: 2px solid blue;
     transition: .3s linear;
 }
 .panel:hover{
