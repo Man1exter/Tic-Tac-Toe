@@ -5,5 +5,22 @@
 }
 body{
     height: 100vh;
-    background: linear-gradient(to right,rgb(0, 0, 0),red,rgb(0, 0, 0));
+    background: linear-gradient(to right,rgb(0, 0, 0),red);
+}
+.square{
+    border: 3px solid blue;
+    width: 50vw;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+}
+.panel{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
