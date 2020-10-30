@@ -9,18 +9,22 @@ body{
 }
 .square{
     border: 3px solid blue;
-    width: 50vw;
     position: absolute;
+    width: 50vw;
+    height: 78vh;
     top: 60%;
     left: 50%;
     transform: translate(-50%,-60%);
-}
-.panel{
     display: flex;
-    height: 100px;
-    width: 100px;
-    background-color: gray;
-    flex-grow: 1;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.panel{
+    height: 250px;
+    width: 318px;
+    background-color: gray;
+    cursor: pointer;
+    border: 1px solid blue;
+    
 }
