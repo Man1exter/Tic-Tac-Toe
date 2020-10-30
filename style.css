@@ -18,6 +18,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-radius: 5px;
 }
 
 .panel{
@@ -26,5 +27,8 @@ body{
     background-color: gray;
     cursor: pointer;
     border: 1px solid blue;
-    
+    transition: .3s linear;
+}
+.panel:hover{
+    background-color: white;
 }
