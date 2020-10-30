@@ -5,5 +5,5 @@
 }
 body{
     height: 100vh;
-    background: linear-gradient(to right,orange,red,rgb(241, 103, 126));
+    background: linear-gradient(to right,rgb(0, 0, 0),red,rgb(0, 0, 0));
 }
