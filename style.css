@@ -28,6 +28,9 @@ body{
     cursor: pointer;
     border: 2px solid blue;
     transition: .3s linear;
+    font-size: 80px;
+    text-align: center;
+    line-height: 250px;
 }
 .panel:hover{
     background-color: white;
