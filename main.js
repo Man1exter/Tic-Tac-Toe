@@ -1,4 +1,4 @@
-
+const panels = [...document.querySelectorAll('.panel')];
 const playerOne = "far fa-circle";
 const playerTwo= "fas fa-times";
 let round = 1;
@@ -15,12 +15,8 @@ const aWays = [
     [" 6 " ," 7 " ," 8 "]
 ]
 
-const panels = [...document.querySelectorAll('.panel')];
-
-panels.forEach(panel => panel.addEventListener("click", createClick));
-
 const createClick = (event) => {
-    const turn = round % 2 === 0 ? player : cpu;
+    const turn = round % 2 === 0 ? playerOne : playerTwo;
     const {row , column} = event.target.dataset;
     board[row][column] = turn;
 
@@ -52,6 +48,7 @@ const createClick = (event) => {
      })
      return winner;
  }
+ panels.forEach(panel => panel.addEventListener("click", createClick));
 
 
 
