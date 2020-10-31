@@ -1,6 +1,6 @@
 
-const player = 'far fa-circle';
-const cpu = 'far fa-times-circle';
+const player = 'fa-circle';
+const cpu = 'fa-times-circle';
 let round = 1;
 
 const board = [
@@ -33,6 +33,15 @@ const createClick = (event) => {
 
  function checkResult(){
      let winner = null;
+
+     const resultSum = board.reduce((total,row) => total.concat(row));
+
+     let moves = {
+        'fa-circle' : [],
+        'fa-times-circle' : []
+     }
+
+     resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null)
  }
 
 
