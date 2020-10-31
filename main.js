@@ -1,6 +1,6 @@
 
-const playerOne = 'fa-circle';
-const playerTwo= 'fa-times-circle';
+const playerOne = "far fa-circle";
+const playerTwo= "fas fa-times";
 let round = 1;
 
 const board = [
@@ -37,8 +37,8 @@ const createClick = (event) => {
      const resultSum = board.reduce((total,row) => total.concat(row));
 
      let moves = {
-        'fa-circle' : [],
-        'fa-times-circle' : []
+        'far fa-circle' : [],
+        'far fa-times-circle' : []
      }
 
      resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null);
