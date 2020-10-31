@@ -36,7 +36,7 @@ const createClick = (event) => {
 
      let moves = {
         'far fa-circle' : [],
-        'far fa-times-circle' : []
+        'fas fa-times' : []
      }
 
      resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null);
