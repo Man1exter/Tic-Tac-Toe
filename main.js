@@ -50,6 +50,7 @@ const createClick = (event) => {
               winner = 'Winner : PlayerTwo';
          }
      })
+     return winner;
  }
 
 
