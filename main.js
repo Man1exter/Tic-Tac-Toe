@@ -22,5 +22,22 @@ panels.forEach(panel => panel.addEventListener("click", createClick));
 const createClick = (event) => {
     const turn = round % 2 === 0 ? player : cpu;
     const {row , column} = event.target.dataset;
+    board[row][column] = turn;
+
+    if(board[row][column] !== '') return;
+
        event.target.classList.add(turn);
+
+       checkResult()
 }
+
+ function checkResult(){
+     let winner = null;
+ }
+
+
+
+
+
+
+
