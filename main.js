@@ -1,6 +1,6 @@
 
-const playerOne = "far fa-circle";
-const playerTwo= "fas fa-times";
+const PLAYERX = "fa-circle-o";
+const PLAYERY= "fa-times";
 let round = 1;
 
 const board = [
@@ -19,7 +19,7 @@ const panels = [...document.querySelectorAll('.panel')];
 
 const createClick = (event) => {
     const {row , column} = event.target.dataset;
-    const turn = round % 2 === 0 ? playerOne : playerTwo;
+    const turn = round % 2 === 0 ? PLAYERX : PLAYERY;
 
     if(board[row][column] !== '') return;
     event.target.classList.add(turn);
@@ -35,17 +35,17 @@ const createClick = (event) => {
      const resultSum = board.reduce((total,row) => total.concat(row));
 
      let moves = {
-        'far fa-circle' : [],
-        'fas fa-times' : []
+        'fa-circle-o' : [],
+        'fa-times' : []
      }
 
      resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null);
 
      aWays.forEach(aWay => {
-         if(aWay.every(index => moves[playerOne].indexOf(index) > -1)){
-              winner = 'Winner : PlayerOne';
-         } if(aWay.every(index => moves[playerTwo].indexOf(index) > -1)){
-              winner = 'Winner : PlayerTwo';
+         if(aWay.every(index => moves[PLAYERX].indexOf(index) > -1)){
+              winner = 'Winner : PLAYERX';
+         } if(aWay.every(index => moves[PLAYERY].indexOf(index) > -1)){
+              winner = 'Winner : PLAYERY';
          }
      })
      return winner;
