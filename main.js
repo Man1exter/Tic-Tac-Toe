@@ -1,6 +1,6 @@
 
-const player = 'fa-circle';
-const cpu = 'fa-times-circle';
+const playerOne = 'fa-circle';
+const playerTwo= 'fa-times-circle';
 let round = 1;
 
 const board = [
@@ -41,7 +41,15 @@ const createClick = (event) => {
         'fa-times-circle' : []
      }
 
-     resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null)
+     resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null);
+
+     aWays.forEach(aWay => {
+         if(aWay.every(index => moves[playerOne].indexOf(index) > -1)){
+              winner = 'Winner : PlayerOne';
+         } if(aWay.every(index => moves[playerTwo].indexOf(index) > -1)){
+              winner = 'Winner : PlayerTwo';
+         }
+     })
  }
 
 
