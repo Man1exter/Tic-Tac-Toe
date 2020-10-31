@@ -18,13 +18,13 @@ const aWays = [
 const panels = [...document.querySelectorAll('.panel')];
 
 const createClick = (event) => {
-    const turn = round % 2 === 0 ? playerOne : playerTwo;
     const {row , column} = event.target.dataset;
-    board[row][column] = turn;
+    const turn = round % 2 === 0 ? playerOne : playerTwo;
 
     if(board[row][column] !== '') return;
-
-       event.target.classList.add(turn);
+    event.target.classList.add(turn);
+    board[row][column] = turn;
+    round++;
 
        checkResult()
 }
