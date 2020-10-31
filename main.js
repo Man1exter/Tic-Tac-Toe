@@ -8,5 +8,6 @@ const panels = [...document.querySelectorAll('.panel')];
 panels.forEach(panel => panel.addEventListener("click", createClick));
 
 const createClick = (event) => {
-
+    const turn = round % 2 === 0 ? player : cpu;
+event.target.classList.add(turn)
 }
