@@ -1,6 +1,6 @@
 
-const playerX = '<i class="far fa-circle"></i>';
-const playerY= '<i class="far fa-times-circle"></i>';
+const $playerX = '<i class="far fa-circle"></i>';
+const $playerY= '<i class="far fa-times-circle"></i>';
 let round = 1;
 
 const board = [
@@ -19,7 +19,7 @@ const panels = [...document.querySelectorAll('.panel')];
 
 const createClick = (event) => {
     const {row , column} = event.target.dataset;
-    const turn = round % 2 === 0 ? playerX : playerY;
+    const turn = round % 2 === 0 ? $playerX : $playerY;
 
     if(board[row][column] !== '') return;
     event.target.classList.add(turn);
