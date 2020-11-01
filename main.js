@@ -30,13 +30,12 @@ const createClick = (event) => {
 }
 
  function checkResult(){
+    const resultSum = board.reduce((total,row) => total.concat(row));
      let winner = null;
 
-     const resultSum = board.reduce((total,row) => total.concat(row));
-
      let moves = {
-        'far fa-circle' : [],
-        'far fa-times-circle' : []
+        'fa-circle' : [],
+        'fa-times-circle' : []
      }
 
      resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null);
