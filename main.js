@@ -1,6 +1,6 @@
 
-const $playerX = '<i class="far fa-circle"></i>';
-const $playerY= '<i class="far fa-times-circle"></i>';
+const PlayerX = "far fa-circle";
+const PlayerY = "far fa-times-circle";
 let round = 1;
 
 const board = [
@@ -19,7 +19,7 @@ const panels = [...document.querySelectorAll('.panel')];
 
 const createClick = (event) => {
     const {row , column} = event.target.dataset;
-    const turn = round % 2 === 0 ? $playerX : $playerY;
+    const turn = round % 2 === 0 ? PlayerX : PlayerY;
 
     if(board[row][column] !== '') return;
     event.target.classList.add(turn);
@@ -42,10 +42,10 @@ const createClick = (event) => {
      resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null);
 
      aWays.forEach(aWay => {
-         if(aWay.every(index => moves[playerX].indexOf(index) > -1)){
+         if(aWay.every(index => moves[PlayerX].indexOf(index) > -1)){
               winner = 'Winner : playerX';
-         } if(aWay.every(index => moves[playerY].indexOf(index) > -1)){
-              winner = 'Winner : playerY';
+         } if(aWay.every(index => moves[PlayerY].indexOf(index) > -1)){
+              winner = 'Winner : PLAYERY';
          }
      })
      return winner;
