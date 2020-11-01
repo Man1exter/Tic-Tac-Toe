@@ -1,23 +1,23 @@
 
-const PlayerX = "fa-circle-o";
-const PlayerY = "fa-times-circle";
+const PlayerX = 'fa-circle';
+const PlayerY = 'fa-times-circle';
 let round = 1;
 
 const board = [
     [" " ," " ," "],
     [" " ," " ," "],
     [" " ," " ," "]
-]
+];
 
 const aWays = [
-    [0,1,2] ,[3,4,5],[6,7,8],
+    [0,1,2] ,[3,4,5] ,[6,7,8],
     [0,3,6] ,[1,4,7] ,[2,5,8],
     [0,4,8] ,[2,4,6]
-]
+];
 
 const panels = [...document.querySelectorAll('.panel')];
 
-const createClick = (event) => {
+function createClick(event) {
     const {row , column} = event.target.dataset;
     const turn = round % 2 === 0 ? PlayerX : PlayerY;
 
@@ -50,7 +50,6 @@ const createClick = (event) => {
      return winner;
  }
  panels.forEach(panel => panel.addEventListener("click", createClick));
- 
 
 
 
