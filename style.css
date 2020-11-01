@@ -42,4 +42,14 @@ body{
     left: 50%;
     top: 0;
     transform: translate(-40%,0%);
+    animation: colorFull 5s linear infinite;
+}
+@keyframes colorFull {
+    0%{color: yellow;}
+    10%{color: orange;}
+    20%{color: greenyellow;}
+    40%{color: green;}
+    60%{color: violet;}
+    80%{color: turquoise;}
+    100%{color: lime;}
 }
