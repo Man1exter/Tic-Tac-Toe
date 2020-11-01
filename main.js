@@ -1,6 +1,6 @@
 
-const PLAYERX = "fa-circle-o";
-const PLAYERY= "fa-times";
+const PLAYERX = '<i class="far fa-circle"></i>';
+const PLAYERY= '<i class="far fa-times-circle"></i>';
 let round = 1;
 
 const board = [
