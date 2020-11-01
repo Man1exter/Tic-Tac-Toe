@@ -36,3 +36,10 @@ body{
     background-color: white;
     color: red;
 }
+.info{
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-40%,0%);
+}
