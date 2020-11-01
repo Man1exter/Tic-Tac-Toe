@@ -43,9 +43,9 @@ const createClick = (event) => {
 
      aWays.forEach(aWay => {
          if(aWay.every(index => moves[PlayerX].indexOf(index) > -1)){
-              winner = 'Winner : playerX';
+              winner = 'Winner : PlayerX';
          } if(aWay.every(index => moves[PlayerY].indexOf(index) > -1)){
-              winner = 'Winner : PLAYERY';
+              winner = 'Winner : PlayerY';
          }
      })
      return winner;
