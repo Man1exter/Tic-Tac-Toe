@@ -1,5 +1,5 @@
 
-const PlayerX = "fa-circle";
+const PlayerX = "fa-circle-o";
 const PlayerY = "fa-times-circle";
 let round = 1;
 
