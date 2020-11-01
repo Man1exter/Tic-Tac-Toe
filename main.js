@@ -1,6 +1,6 @@
 
-const PlayerX = "far fa-circle";
-const PlayerY = "far fa-times-circle";
+const PlayerX = "fa-circle";
+const PlayerY = "fa-times-circle";
 let round = 1;
 
 const board = [
@@ -10,9 +10,9 @@ const board = [
 ]
 
 const aWays = [
-    ["0,1,2"] ,["3,4,5"],["6,7,8"],
-    ["0,3,6"] ,["1,4,7"] ,["2,5,8"],
-    ["0,4,8"] ,["2,4,6"]
+    [0,1,2] ,[3,4,5],[6,7,8],
+    [0,3,6] ,[1,4,7] ,[2,5,8],
+    [0,4,8] ,[2,4,6]
 ]
 
 const panels = [...document.querySelectorAll('.panel')];
@@ -35,8 +35,8 @@ const createClick = (event) => {
      const resultSum = board.reduce((total,row) => total.concat(row));
 
      let moves = {
-        'fa-circle-o' : [],
-        'fa-times' : []
+        'far fa-circle' : [],
+        'far fa-times-circle' : []
      }
 
      resultSum.forEach((field,index) => moves[field] ? moves[field].push(index) : null);
@@ -51,6 +51,7 @@ const createClick = (event) => {
      return winner;
  }
  panels.forEach(panel => panel.addEventListener("click", createClick));
+ 
 
 
 
