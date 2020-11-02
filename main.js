@@ -1,29 +1,19 @@
 
 
 const $panels = document.querySelectorAll('.panel');
-const $panels = [...('.panel')];
+const $panelsEle = [...$panels];
 let round = 1;
 
 
-const pick = (event) => {
+const pickItem = (e) => {
 
-const itemX = document.createElement('<i class="far fa-circle"></i>');
-const itemY = document.createElement('<i class="far fa-times-circle"></i>');
 
-if(event.target.value !== ' '){
 
+    
 }
 
 
-$panels.appendChild(itemX);
-$panels.appendChild(itemY);
-};
-
-
-
-
-
-$panels.addEventListener('click', pick);
+$panels.addEventListener('click', pickItem);
 
 
 
