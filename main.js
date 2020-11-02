@@ -34,7 +34,7 @@ function changePlayer() {
 
 
 
-const showIcon = (e) => {
+function showIcon (e) {
     const clickPanel = e.target;
     const clickPanelEle = parseInt(clickPanel.getAttribute('data-panel'));
 
@@ -82,7 +82,7 @@ function resultClicker() {
 
 
 
-const restartGame = () => {
+function restartGame () {
     gameActive = true;
     combinationsEmpty = ["","","","","","","","",""];
     playerX = 'fa-circle';  // circle always start the game 
