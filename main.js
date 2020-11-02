@@ -1,9 +1,14 @@
+const buttonReset = document.querySelector('.reset');
+
+
+
+
 
 
 
 
 function showIcon(){
-    
+
 }
 
 
