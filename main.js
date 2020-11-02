@@ -1,4 +1,4 @@
-
+const button = document.querySelector(".restart");
 const $panels = document.querySelectorAll('.panel');
 const $panelsEle = [...$panels];
 

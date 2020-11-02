@@ -48,3 +48,21 @@ body{
     80%{color: turquoise;}
     100%{color: lime;}
 }
+.restart{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 200px;
+    height: 75px;
+    cursor: pointer;
+    font-size: 40px;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: yellow;
+    transition: .2s linear;
+}
+.restart:hover{
+    border: 4px solid yellow;
+    background-color: black;
+    color: white;
+}
