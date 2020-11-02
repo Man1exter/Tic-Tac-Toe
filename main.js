@@ -1,6 +1,7 @@
 
 let round = 1;
 let playerX = 'fa-circle';
+let gameActive = true;
 
 let combinationsEmpty = ["","","","","","","","",""];
 
@@ -35,6 +36,37 @@ function changePlayer() {
 const showIcon = (e) => {
 
 
+};
+function resultClicker() {
+    let roundWon = false;
+    for (let i = 0; i <= 7; i++) {
+        const winCondition = winningConditions[i];
+
+        let a = combinationsEmpty[winCondition[0]];
+        let b = combinationsEmpty[winCondition[1]];
+        let c = combinationsEmpty[winCondition[2]];
+
+        if (a === '' || b === '' || c === '') {
+            continue;
+        }
+        if (a === b && b === c) {
+            roundWon = true;
+            break
+        }
+    };
+
+    if (roundWon) {
+        gameActive = false;
+        return;
+    };
+
+    let roundDraw = !combinationsEmpty.includes("");
+    if (roundDraw) {
+        gameActive = false;
+        return;
+    };
+
+    changePlayer();
 };
 
 
