@@ -8,39 +8,34 @@ body{
     background: linear-gradient(to right,rgb(0, 0, 0),red);
 }
 .square{
-    border: 3px solid blue;
-    position: absolute;
-    width: 50vw;
-    height: 78.5vh;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-60%);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin-left: 580px;
+    margin-top: 150px;
 }
 
 .panel{
     height: 250px;
-    width: 316px;
-    background-color: gray;
+    width: 250px;
+    background-color: white;
     cursor: pointer;
-    border: 2px solid blue;
+    border: 4px solid blue;
     transition: .3s linear;
     font-size: 80px;
     text-align: center;
     line-height: 250px;
+    border-radius: 20px;
 }
 .panel:hover{
-    background-color: white;
+    background-color: gray;
     color: red;
 }
 .info{
     font-size: 100px;
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 3%;
     transform: translate(-40%,0%);
     animation: colorFull 5s linear infinite;
 }
