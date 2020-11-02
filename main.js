@@ -1,6 +1,4 @@
 
-const $infoP = document.querySelector('.info');
-
 let round = 1;
 let playerX = 'fa-circle';
 let playerY = 'far fa-times-circle';
@@ -26,8 +24,8 @@ const showIcon = () => {
 
 const restartGame = () => {
     combinationsEmpty = ["","","","","","","","",""];
-    
-
+    playerX = 'fa-circle';  // circle always start the game 
+    document.querySelectorAll('.panel').forEach(panel => panel.innerHTML = "");
 };
 
 document.querySelectorAll('.panel').forEach(panel => panel.addEventListener("click", showIcon));
