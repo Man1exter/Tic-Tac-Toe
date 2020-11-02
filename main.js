@@ -16,8 +16,14 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
+function mainPanelPlay(clickPanel, clickPanelEle) {
 
-const showIcon = () => {
+    combinationsEmpty[clickPanelEle] = currentPlayer;
+    clickPanel.innerHTML = currentPlayer;
+    
+}
+
+const showIcon = (e) => {
 
 
 };
