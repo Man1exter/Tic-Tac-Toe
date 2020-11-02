@@ -1,7 +1,6 @@
 
 let round = 1;
 let playerX = 'fa-circle';
-let playerY = 'far fa-times-circle';
 
 let combinationsEmpty = ["","","","","","","","",""];
 
@@ -18,10 +17,14 @@ const winningConditions = [
 
 function mainPanelPlay(clickPanel, clickPanelEle) {
 
-    combinationsEmpty[clickPanelEle] = currentPlayer;
-    clickPanel.innerHTML = currentPlayer;
-    
-}
+    combinationsEmpty[clickPanelEle] = playerX;
+    clickPanel.innerHTML = playerX;
+
+};
+
+function changePlayer() {
+    playerX = playerX === "fa-circle" ? "far fa-times-circle" : "fa-circle";
+};
 
 const showIcon = (e) => {
 
