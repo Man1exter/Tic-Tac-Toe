@@ -34,9 +34,19 @@ function changePlayer() {
 
 
 const showIcon = (e) => {
+    const clickPanel = e.target;
+    const clickPanelEle = parseInt(clickPanel.getAttribute('data-panel'));
 
+    if (combinationsEmpty[clickPanel] !== "" || !gameActive) {
+        return;
+    }
+
+    mainPanelPlay(clickPanel, clickPanelEle);
+    resultClicker();
 
 };
+
+
 function resultClicker() {
     let roundWon = false;
     for (let i = 0; i <= 7; i++) {
