@@ -1,4 +1,4 @@
-const $button = document.querySelector(".restart");
+
 const $infoP = document.querySelector('.info');
 
 let round = 1;
@@ -18,17 +18,18 @@ const winningConditions = [
 ];
 
 
-const pickItem = (e) => {
-if(round % 2 === 0 ){
-
-}
+const showIcon = () => {
 
 
-}
+};
 
+const restartGame = () => {
+
+    
+};
 
 document.querySelectorAll('.panel').forEach(panel => panel.addEventListener("click", showIcon));
-$button.addEventListener("click", restartGame);
+document.querySelector('.restart').addEventListener('click', restartGame);
 
 
 
