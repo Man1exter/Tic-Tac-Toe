@@ -15,6 +15,8 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
+
+
 function mainPanelPlay(clickPanel, clickPanelEle) {
 
     combinationsEmpty[clickPanelEle] = playerX;
@@ -22,20 +24,27 @@ function mainPanelPlay(clickPanel, clickPanelEle) {
 
 };
 
+
+
 function changePlayer() {
     playerX = playerX === "fa-circle" ? "far fa-times-circle" : "fa-circle";
 };
+
+
 
 const showIcon = (e) => {
 
 
 };
 
+
+
 const restartGame = () => {
     combinationsEmpty = ["","","","","","","","",""];
     playerX = 'fa-circle';  // circle always start the game 
     document.querySelectorAll('.panel').forEach(panel => panel.innerHTML = "");
 };
+
 
 document.querySelectorAll('.panel').forEach(panel => panel.addEventListener("click", showIcon));
 document.querySelector('.restart').addEventListener('click', restartGame);
