@@ -1,7 +1,4 @@
-const button = document.querySelector(".restart");
-const $panels = document.querySelectorAll('.panel');
-const $panelsEle = [...$panels];
-
+const $button = document.querySelector(".restart");
 const $infoP = document.querySelector('.info');
 
 let round = 1;
@@ -30,7 +27,8 @@ if(round % 2 === 0 ){
 }
 
 
-$panels.addEventListener('click', pickItem);
+document.querySelectorAll('.panel').forEach(panel => panel.addEventListener("click", showIcon));
+$button.addEventListener("click", restartGame);
 
 
 
