@@ -1,6 +1,7 @@
+"use strict"
 
 let round = 1;
-let playerX = 'fa-circle';
+let playerX = 'X';
 let gameActive = true;
 
 let combinationsEmpty = ["","","","","","","","",""];
@@ -28,7 +29,7 @@ function mainPanelPlay(clickPanel, clickPanelEle) {
 
 
 function changePlayer() {
-    playerX = playerX === "fa-circle" ? "far fa-times-circle" : "fa-circle";
+    playerX = playerX === "X" ? "O" : "X";
 };
 
 
@@ -82,6 +83,7 @@ function resultClicker() {
 
 
 const restartGame = () => {
+    gameActive = true;
     combinationsEmpty = ["","","","","","","","",""];
     playerX = 'fa-circle';  // circle always start the game 
     document.querySelectorAll('.panel').forEach(panel => panel.innerHTML = "");
